@@ -5,10 +5,16 @@
 safari.application.addEventListener("beforeSearch", beforeSearchHandler, true);
 
 function beforeSearchHandler(event) {
-  var usernameMatch = event.query.match(/^@(\w+)/);
+  var usernameMatch = event.query.match(/^@(\w+)/),
+      hashtagMatch = event.query.match(/^\#(\w+)/);
 
   if(usernameMatch) {
     event.target.url = 'http://twitter.com/' + usernameMatch[1];
+    event.preventDefault();
+  }
+  
+  if(hashtagMatch) {
+    event.target.url = 'http://twitter.com/search?q=%23' + hashtagMatch[1] + '&src=hash';
     event.preventDefault();
   }
 
