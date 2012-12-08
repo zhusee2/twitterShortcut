@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<head>
+<script>
+safari.application.addEventListener("beforeSearch", beforeSearchHandler, true);
+
+function beforeSearchHandler(event) {
+  var usernameMatch = event.query.match(/^@(\w+)/);
+
+  if(usernameMatch) {
+    event.target.url = 'http://twitter.com/' + usernameMatch[1];
+    event.preventDefault();
+  }
+
+}
+</script>
