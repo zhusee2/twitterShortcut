@@ -7,9 +7,9 @@
 	<key>Builder Version</key>
 	<string>8536.26.17</string>
 	<key>CFBundleDisplayName</key>
-	<string>Profile Shortcut</string>
+	<string>Twitter Shortcut</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.zhusee2.extension.profileShortcut</string>
+	<string>net.zhusee2.extension.twitterShortcut</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
